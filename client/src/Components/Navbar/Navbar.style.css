@@ -1,0 +1,26 @@
+.nav {
+  box-shadow: 0px 1px 6px rgba(66, 66, 66, 0.534);
+  justify-content: space-between;
+  background-color: rgba(228, 228, 228, 0.300);
+  padding: 0.8rem;
+}
+
+.nav-menu{
+  justify-self: center;
+  align-self: center;
+  text-decoration: none;
+}
+
+.nav-menu a {
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  padding: 1rem;
+}
+
+.nav-search {
+  display: flex;
+  flex-direction: row;
+  width: 20vw;
+  flex-wrap: nowrap;  
+}

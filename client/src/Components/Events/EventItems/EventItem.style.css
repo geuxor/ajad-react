@@ -1,0 +1,68 @@
+.event-card {
+  border-radius: 8px 24px;
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 8px;
+}
+
+.event-card img {
+  height: 100%;
+  width: 16vw;
+  object-fit: cover;
+}
+
+.event-date {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 12vw;
+  color: aliceblue;
+  background-color: rgb(22, 128, 177);
+}
+
+.event-date-date {
+  font-weight: 600;
+  font-size: 2.4rem;
+}
+
+.event-date-time {
+  font-weight: 500;
+  font-size: 1.2rem;
+
+}
+
+.event-info {
+  flex-grow: 1;
+  padding: 16px;
+
+}
+.event-title {
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: black;
+  opacity: 0.75;
+  
+}
+
+.event-venue {
+  padding: 0 0 0 8px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: .6;
+  margin-bottom: 0;
+  margin-top: 8px;
+  color: black;
+
+
+}
+
+.event-link {
+  text-decoration: none;
+}
