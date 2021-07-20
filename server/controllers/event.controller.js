@@ -11,6 +11,8 @@ async function getEvents (req, res) {
 }
 
 async function postEvent (req, res) {
+  console.log(req.body);
+  
   try {
     const event = await eventModel.create(req.body);
     res.body = req.body;

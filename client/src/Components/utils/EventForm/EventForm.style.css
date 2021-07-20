@@ -16,10 +16,14 @@
   padding: 8px;
 }
 
-.error {
-  border-color: red;
+.file-uploader {
+  padding: 8px;
 }
 
 .form-date-label {
   font-size: 12px;
 }
+
+.error {
+  border: 1px solid red;
+}  

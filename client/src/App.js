@@ -1,46 +1,26 @@
 import './App.css';
-import React, { useState, useEffect } from 'react'
-import { getEvents, postEvent } from './Services/ApiService';
-import EventList from './Components/EventList/EventList.component'
-import EventForm from './Components/EventForm/EventForm.component'
-import Listgroup from './Components/Listgroup/Listgroup.component';
-
+import React, { } from 'react'
+import Event from './Components/Events/Event.component'
+import Navbar from './Components/Navbar/Navbar.component';
+import { Route, Switch, Redirect } from 'react-router-dom'
+import NotFound from './Components/common/notFound';
 function App() {
-  const [events, setEvents] = useState([])
-  const [categories, setCategories] = useState([])
-
-  useEffect(() => {
-    (async () => {
-      const eventList = await getEvents()
-      setEvents(eventList)
-      // const categoryList = await getEvents()
-      // setCategories(categoryList)
-    })()
-  }, [])
-  
-  const addEvent = async (event) => {
-    const newEvent = await postEvent(event)
-    setEvents((prev) => [...prev, newEvent])
-  }
 
   return (
     <div className="App">
-      <div className="title">
-        Latest Events
-      </div>
-      <div className="main">
-        <div className="events">
-          <EventList events={events} />
-        </div>
-        <div>
-        {/* <div className="cat-list">
-            <Listgroup categories={categories}/>
-        </div> */}
-        <div className="form">
-          <EventForm addEvent={addEvent} />
-        </div>
-        </div>
-      </div>
+      <Navbar />
+      <main className="">
+        <Switch>
+          <Route path="/events/:id" component={Event} />
+          <Route path="/events" component={Event} />
+          <Route path="/posts/:year?/:month?" component="" />
+          <Route path="/shop" component="" />
+          <Route path="/not-found" component={NotFound} />
+          <Route path="/" exact component="" />
+          <Redirect to="/not-found" />
+        </Switch>
+      </main>
+
     </div>
   );
 }

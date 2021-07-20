@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import EventItem from "../EventItems/EventItem.component";
-import "./EventList.style.css";
 import NextEvent from "../EventItems/EventItemNext.component";
-import { paginate } from "../common/paginate"
-import Pagination from "../common/Pagination.component";
+import { paginate } from "../../common/paginate"
+import Pagination from "../../common/Pagination.component";
+import "./EventList.style.css";
 
 
 function EventList({ events }) {
@@ -11,6 +11,12 @@ function EventList({ events }) {
   const [currentPage, setCurrentPage] = useState(1);
 
   const now = new Date();
+  if (events.length === 0) {
+    return (
+       <div className="container">No Event happening at the moment...</div>
+    )
+  }
+
   const upcomingEvents = events.filter(
     (event) => (new Date(event.date) !== null) & (new Date(event.date) > now)
     );
@@ -42,6 +48,7 @@ function EventList({ events }) {
             ""
           );
         })}
+        <div>Latest Events:</div>
         {paginatedEvents}
       </ul>
       <div className="main-pagination">

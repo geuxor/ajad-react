@@ -11,6 +11,7 @@
     "moment": "^2.24.0",
     "mongodb": "^4.0.0",
     "mongoose": "^5.13.2",
+    "multer": "^1.4.2",
     "npm-run-path": "^2.0.2",
     "package-json": "^6.5.0",
     "react": "^17.0.1",
