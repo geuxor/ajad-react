@@ -4,6 +4,7 @@ import Event from './Components/Events/Event.component'
 import Navbar from './Components/Navbar/Navbar.component';
 import { Route, Switch, Redirect } from 'react-router-dom'
 import NotFound from './Components/common/notFound';
+import Shop from './Components/Shop/Shop.component'
 function App() {
 
   return (
@@ -14,7 +15,7 @@ function App() {
           <Route path="/events/:id" component={Event} />
           <Route path="/events" component={Event} />
           <Route path="/posts/:year?/:month?" component="" />
-          <Route path="/shop" component="" />
+          <Route path="/shop" component={Shop} />
           <Route path="/not-found" component={NotFound} />
           <Route path="/" exact component="" />
           <Redirect to="/not-found" />

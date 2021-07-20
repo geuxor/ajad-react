@@ -1,0 +1,1 @@
+{"publishableKey":"pk-test_"}
