@@ -1,0 +1,26 @@
+[
+  {
+    "_id": 0,
+    "date": "2090-05-24T19:30",
+    "title": "Graduation Party",
+    "venue": "Codeworks"
+  },
+  {
+    "_id": 1,
+    "date": "2099-01-04T17:00",
+    "title": "Arol's wedding",
+    "venue": "Barcelona"
+  },
+  {
+    "_id": 2,
+    "date": "2018-07-14T21:30",
+    "title": "Super cool party",
+    "venue": "Barceloneta Beach"
+  },
+  {
+    "_id": 3,
+    "date": "2222-01-01T00:01",
+    "title": "End of the World",
+    "venue": "World"
+  }
+]

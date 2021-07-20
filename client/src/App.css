@@ -1,0 +1,35 @@
+.App {
+  /* width: 96vw; */
+  /* margin: 1.5rem auto; */
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+
+.title {
+  padding: 1rem 1rem 0.3rem 1.6rem;
+  font-weight: 600;
+  font-size: 30px;
+  border: 0px;
+  box-shadow: 3px 3px 10px rgba(144, 144, 144, 0.637);
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+}
+
+.events {
+    padding: 1rem 1rem 0.3rem 1.6rem;
+  flex-grow: 1;
+    
+}
+
+.form {
+  padding: 1rem 1rem 0.3rem 1.6rem;
+  flex-grow: 0;
+}
+
+.cat-list {
+  padding: 1rem 1rem 0.3rem 1.6rem;
+  flex-grow: 0;
+}
+

@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "eslint": "^7.20.0",
+    "express": "^4.17.1",
+    "moment": "^2.24.0",
+    "mongodb": "^4.0.0",
+    "mongoose": "^5.13.2",
+    "npm-run-path": "^2.0.2",
+    "package-json": "^6.5.0",
+    "react": "^17.0.1",
+    "react-is": "^16.13.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

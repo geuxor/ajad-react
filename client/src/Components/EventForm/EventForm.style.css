@@ -1,0 +1,25 @@
+.event-form {
+  margin: 0;
+  padding: 1.6rem 1.6rem 1.6rem 1.6rem;
+  box-shadow: 3px 3px 10px rgba(144, 144, 144, 0.637);
+  border-radius: 2%;
+}
+
+.form-title {
+  padding: 8px;
+}
+
+.form-venue {
+  padding: 8px;
+}
+.form-date {
+  padding: 8px;
+}
+
+.error {
+  border-color: red;
+}
+
+.form-date-label {
+  font-size: 12px;
+}

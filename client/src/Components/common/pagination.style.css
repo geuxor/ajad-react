@@ -1,0 +1,36 @@
+.center {
+  justify-content: center;
+ }
+ 
+ .dropup {
+   position: relative;
+   display: inline-block;
+  }
+  
+.dropup-content {
+  cursor: pointer;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  bottom: 38px;
+  z-index: 1;
+}
+
+.dropup:hover {
+  display: block;
+}
+
+.dropup-content button {
+  text-decoration: none;
+}
+
+.dropup-content button:hover {
+  color: aliceblue;
+  background-color: #6c757d
+}
+
+.dropup:hover .dropup-content {
+  display: block;
+}
+

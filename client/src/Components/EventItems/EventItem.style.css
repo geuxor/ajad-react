@@ -1,0 +1,54 @@
+.eventItems {
+  display: flex;
+  margin: 16px;
+  box-shadow: 3px 3px 10px rgba(144, 144, 144, 0.637);
+  border-bottom-right-radius: 50px 20px;
+  border-top-right-radius: 5% 200px;
+  
+  
+}
+
+.event-desc {
+  padding: 12px;
+  width: 50vw;
+  /* border: 0.8px solid rgba(128, 128, 128, 0.274); */
+}
+.eventVenue {
+  display: flex;
+  flex-direction: column;
+}
+
+.eventVenue p {
+  padding: 0 0 0 8px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.eventVenue i {
+  color: rgb(29, 114, 211);
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.event-date {
+  display: flex;
+  flex-direction: column;
+  width: 16vw;
+  padding: 0.16rem 1.2rem 0rem;
+  color: aliceblue;
+  font-weight: 500;
+  background-color: rgb(255, 101, 30);
+  align-items: center;
+  justify-content: center;
+  font-size: 1.0rem;
+  border-top-left-radius: 5% 8px;
+}
+
+.event-date-time {
+  font-weight: 600;
+}
+
+.event-title h3 {
+  font-weight: 700;
+  font-size: 1.4rem;
+}

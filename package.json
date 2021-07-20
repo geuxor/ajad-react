@@ -1,0 +1,63 @@
+{
+  "name": "codeworks-weekly-assessment-6",
+  "version": "1.1.6",
+  "description": "A Codeworks exercise to train students",
+  "main": "index.js",
+  "scripts": {
+    "install": "cd ./client && npm i . && cd ../server && npm i .",
+    "start:server": "node ./server",
+    "start:client": "cd ./client && BROWSER=none npm start && cd ..",
+    "start:server-client": "start-test start:server 3001/events start:client",
+    "test": "cypress run",
+    "test:open": "cypress open",
+    "test:ci": "start-test start:server-client 3000 test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codeworks/weekly-assessment-6.git"
+  },
+  "author": "Codeworks",
+  "license": "UNLICENSED",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/codeworks/weekly-assessment-6/issues"
+  },
+  "homepage": "https://github.com/codeworks/weekly-assessment-6#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "cypress": "^3.3.2",
+    "cz-changelog": "1.0.1",
+    "del": "5.0.0",
+    "eslint": "^7.11.0",
+    "eslint-config-react-app": "^6.0.0",
+    "eslint-plugin-flowtype": "^3.11.1",
+    "eslint-plugin-import": "2.18.0",
+    "eslint-plugin-jest": "^24.1.5",
+    "eslint-plugin-json": "^1.4.0",
+    "eslint-plugin-jsx-a11y": "6.2.3",
+    "eslint-plugin-react": "7.14.2",
+    "eslint-plugin-react-hooks": "1.6.1",
+    "eslint-plugin-testing-library": "^3.10.1",
+    "gulp": "4.0.2",
+    "gulp-eslint": "5.0.0",
+    "gulp-load-plugins": "2.0.0",
+    "gulp-replace": "1.0.0",
+    "husky": "3.0.0",
+    "nodemon": "^2.0.12",
+    "start-server-and-test": "^1.9.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-changelog"
+    }
+  },
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "react": "^17.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "gulp lint"
+    }
+  }
+}
