@@ -6,6 +6,8 @@ const getEvents = async () => {
 }
 
 const postEvent = async (event) => {
+  console.log('posting', event);
+  
   const dbData = await fetch(`${DB_URL}`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
