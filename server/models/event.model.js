@@ -15,11 +15,7 @@ const eventSchema = new Schema({
   date: {
     type: Date,
     require: true,
-  },
-  image: {
-      data: Buffer,
-      contentType: String
-    }
+  }
 });
 
 const Event = mongoose.model('Event', eventSchema);
