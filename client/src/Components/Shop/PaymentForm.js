@@ -28,15 +28,15 @@ const PaymentForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { error, PaymentMethod } = await stripe.createPaymentMethod({
+    const results = await stripe.createPaymentMethod({
       type: "card",
       card: elements.getElement(CardElement)
     })
-    console.log(error);
+    console.log(results);    
 
-    if (!error) {
+    if (!results.error) {
       try {
-        const { id } = PaymentMethod
+        const { id } = results.paymentMethod
         const response = await axios.post("http://localhost:4000/payment", {
           amount: 1000,
           id
@@ -49,11 +49,12 @@ const PaymentForm = () => {
         console.log("Error", err);
       }
     } else {
-      console.log(error);
+      console.log(results.error);
     }
   }
   return (
     <div className="container col-4">
+    
       {!success ?
         <form onSubmit={handleSubmit}>
           <fieldset className="FormGroup">

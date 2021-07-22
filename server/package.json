@@ -15,7 +15,8 @@
     "npm-run-path": "^2.0.2",
     "package-json": "^6.5.0",
     "react": "^17.0.1",
-    "react-is": "^16.13.1"
+    "react-is": "^16.13.1",
+    "stripe": "^8.164.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.12"
