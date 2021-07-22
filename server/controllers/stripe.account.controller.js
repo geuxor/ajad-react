@@ -6,7 +6,7 @@ const userID = { user_id: 'a1' }
 
 function getStripeAccount(req, res) {
   const account = createStripeAccount(req, res)
-  console.log('stripecontroller', account, '\n', res.body);
+  // console.log('stripecontroller', account, '\n', res.body);
 }
 
 function getStripeAccountLink(req, res) {

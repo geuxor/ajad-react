@@ -2,20 +2,17 @@ import React, { useState } from "react";
 import { createStripeAccount, createStripeAccountLink } from "../../Services/StripeService";
 const DB_URL = "http://localhost:3001/stripe/accountdata";
 
-function Stripe(props) {
-  const [stripeAccount, setStripeAccount] = useState('');
-  const [stripeAccountLink, setStripeAccountLink] = useState('')
+function StripeAccount(props) {
+  const [stripeAccount, setStripeAccount] = useState("");
+  const [stripeAccountLink, setStripeAccountLink] = useState("");
 
   const createAccount = () => {
     (async () => {
       const newStripeAccount = await createStripeAccount();
-      console.log("id", newStripeAccount.id);
       setStripeAccount(newStripeAccount);
-      console.log('x', stripeAccount);
-      const accountData = {}
-      accountData['accountID'] = stripeAccount.id;
-      accountData['userID'] = 'a1'
-      console.log(accountData);
+      const accountData = {};
+      accountData["accountID"] = stripeAccount.id;
+      accountData["userID"] = "a1";
       postStripeAccount(accountData);
     })();
   };
@@ -30,18 +27,16 @@ function Stripe(props) {
     return await dbData.json();
   };
 
-  const createAccountLink = (account) =>{
+  const createAccountLink = (account) => {
     (async () => {
-      
       const newStripeAccountLink = await createStripeAccountLink(account);
       console.log(newStripeAccountLink);
-      setStripeAccountLink(newStripeAccountLink)
-    })()
-  }
+      setStripeAccountLink(newStripeAccountLink);
+    })();
+  };
 
   return (
     <div>
-    
       <button
         onClick={() => {
           createAccount();
@@ -59,7 +54,7 @@ function Stripe(props) {
         </button>
         <div>
           <a aria-label="" href={stripeAccountLink.url} target="blank">
-            account url 
+            account url
           </a>
         </div>
       </div>
@@ -67,5 +62,5 @@ function Stripe(props) {
   );
 }
 
-export default Stripe;
+export default StripeAccount;
 // <div>{stripeAccountLink}</div>

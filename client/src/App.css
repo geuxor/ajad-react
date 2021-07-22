@@ -15,5 +15,23 @@ $bg-search: rgb(253, 61, 61); */
 .App {
   /* width: 96vw; */
   /* margin: 1.5rem auto; */
-  font-family: "Montserrat", sans-serif;
+  font-family: Montserrat, sans-serif;
+}
+
+/* #root {
+  height: 100%;
+} */
+
+body {
+  /* height: 100vh; */
+  margin: 0;
+}
+
+html {
+  /* font-size: 16px; */
+  font-family: Montserrat, Open Sans, Segoe UI, sans-serif;
+  /* font-weight: 500; */
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  height: 100%;
 }
